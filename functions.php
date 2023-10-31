@@ -103,6 +103,10 @@ function tjm_2023_redesign_scripts() {
 	// Google Fonts
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;700&display=swap', array(), null );
 
+	// Core theme CSS (includes Bootstrap)
+    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', array(), _S_VERSION );
+    wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/styles.css', array(), _S_VERSION );
+
 	wp_enqueue_style( 'tjm-2023-redesign-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'tjm-2023-redesign-style', 'rtl', 'replace' );
 
