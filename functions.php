@@ -97,6 +97,12 @@ add_action( 'widgets_init', 'tjm_2023_redesign_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tjm_2023_redesign_scripts() {
+	// Font Awesome
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/db9f4287e6.js', array(), null );
+
+	// Google Fonts
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;700&display=swap', array(), null );
+
 	wp_enqueue_style( 'tjm-2023-redesign-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'tjm-2023-redesign-style', 'rtl', 'replace' );
 
