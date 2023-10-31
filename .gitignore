@@ -1,0 +1,20 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except for themes, plugins, and uploads.
+wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
+!wp-content/uploads/
+
+# Ignore everything in the "themes" directory, except for the current theme.
+wp-content/themes/*
+!wp-content/themes/your-theme-name/
+
+# Ignore everything in the "plugins" directory, except for the plugins you want to include.
+wp-content/plugins/*
+!wp-content/plugins/plugin-name/
+
+.DS_Store
