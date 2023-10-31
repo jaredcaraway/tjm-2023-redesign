@@ -118,6 +118,23 @@ function tjm_2023_redesign_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tjm_2023_redesign_scripts' );
 
+function add_preconnect_links() {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com" />';
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />';
+}
+add_action('wp_head', 'add_preconnect_links');
+
+function add_crossorigin_to_script($tag, $handle, $src) {
+    // Check if handle matches the handle you used while enqueueing the script
+    if ('font-awesome' === $handle) {
+        $tag = '<script src="' . esc_url($src) . '" crossorigin="anonymous"></script>';
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'add_crossorigin_to_script', 10, 3);
+
+remove_action('wp_head', 'wp_resource_hints', 2);
+
 /**
  * Implement the Custom Header feature.
  */

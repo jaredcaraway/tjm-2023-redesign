@@ -13,11 +13,18 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-	<?php wp_head(); ?>
+	<meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+	<!-- TODO: Add meta description -->
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Terry Jude Miller: Richmond, Texas-Based Poet & Author</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
