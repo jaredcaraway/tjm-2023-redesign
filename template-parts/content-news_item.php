@@ -11,17 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
         <div class="entry-meta">
             <?php
             tjm_2023_redesign_posted_on();
-            tjm_2023_redesign_posted_by();
             ?>
         </div><!-- .entry-meta -->
     </header><!-- .entry-header -->
 
     <div class="entry-content">
-        <h1>NEWS ITEM TEMPLATE</h1>
         <?php
         the_content();
 
