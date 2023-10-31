@@ -20,13 +20,6 @@ if ( ! defined( '_S_VERSION' ) ) {
  * as indicating support for post thumbnails.
  */
 function tjm_2023_redesign_setup() {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on TJM 2023 Redesign, use a find and replace
-		* to change 'tjm-2023-redesign' to the name of your theme in all the template files.
-		*/
-	load_theme_textdomain( 'tjm-2023-redesign', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
