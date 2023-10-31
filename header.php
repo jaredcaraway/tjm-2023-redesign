@@ -27,40 +27,84 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class();  ?> id="page-top" >
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tjm-2023-redesign' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$tjm_2023_redesign_description = get_bloginfo( 'description', 'display' );
-			if ( $tjm_2023_redesign_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $tjm_2023_redesign_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tjm-2023-redesign' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<!-- Navigation-->
+	<nav class="navbar navbar-expand-xl bg-secondary fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand text-uppercase" href="#page-top">
+			Terry Jude Miller
+			</a>
+			<button
+			class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarResponsive"
+			aria-controls="navbarResponsive"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+			>
+			Menu
+			<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item mx-0 mx-lg-1">
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"
+					>About</a
+				>
+				</li>
+				<li class="nav-item mx-0 mx-lg-1">
+				<a href="#news" class="nav-link py-3 px-0 px-lg-3 rounded"
+					>News</a
+				>
+				</li>
+				<li class="nav-item mx-0 mx-lg-1">
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#books"
+					>Books</a
+				>
+				</li>
+				<li class="nav-item mx-0 mx-lg-1">
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#anthologies"
+					>Anthologies</a
+				>
+				</li>
+				<li class="nav-item mx-0 mx-lg-1">
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#photos"
+					>Photos</a
+				>
+				</li>
+				<li class="nav-item mx-0 mx-lg-1">
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#poems"
+					>Poems</a
+				>
+				</li>
+			</ul>
+			</div>
+		</div>
+		</nav>
+		<!-- Masthead-->
+		<header class="masthead bg-primary text-white text-center">
+		<div class="container d-flex align-items-center flex-column">
+			<!-- Masthead Avatar Image-->
+			<img
+			class="masthead-avatar mb-4"
+			src="<?php echo get_template_directory_uri() . '/assets/img/terry-jude-miller-portrait-no-bg.png' ?>"
+			alt="Portrait of Texas poet Terry Jude Miller wearing a black shirt and gray suit jacket."
+			/>
+			<!-- Masthead Heading-->
+			<h1 class="masthead-heading text-uppercase mb-0">Terry Jude Miller</h1>
+			<!-- Masthead Subheading-->
+			<p class="masthead-subheading font-weight-light mb-0 mt-4">
+			Poet based in Richmond, Texas
+			</p>
+			<!-- Icon Divider-->
+			<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon">
+				<i class="fa-solid fa-pen-nib"></i>
+			</div>
+			<div class="divider-custom-line"></div>
+			</div>
+		</div>
+		</header>
