@@ -32,7 +32,7 @@
 <!-- Navigation-->
 	<nav class="navbar navbar-expand-xl bg-secondary fixed-top" id="mainNav">
 		<div class="container">
-			<a class="navbar-brand text-uppercase" href="<?php echo get_site_url() . '#page-top' ?>">
+			<a class="navbar-brand text-uppercase" href="<?php echo get_site_url() ?>">
 			Terry Jude Miller
 			</a>
 			<button
