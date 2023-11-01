@@ -11430,6 +11430,8 @@ html {
 
 .copyright {
   background-color: #1a252f;
+  font-family: var(--bs-font-serif);  
+  font-size: 1.3rem;
 }
 
 .btn-danger:hover {

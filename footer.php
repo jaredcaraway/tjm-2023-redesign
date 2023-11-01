@@ -11,20 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tjm-2023-redesign' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'tjm-2023-redesign' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tjm-2023-redesign' ), 'tjm-2023-redesign', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer"> 
+		<!-- Copyright Section-->
+		<div class="copyright py-4 text-center text-white">
+			<div class="container">
+				<small>Copyright &copy; Terry Jude Miller 2023</small><br />
+				<small>
+				Website design by
+				<a
+					href="mailto:jared.caraway@gmail.com"
+					target="_blank"
+					rel="noopener"
+					>Jared Caraway</a
+				></small>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
