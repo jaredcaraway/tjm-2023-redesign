@@ -133,29 +133,77 @@ get_header(); ?>
           News
         </h2>
 
-        <!-- News Section Content -->
-        <div class="row">
-          <div class="col-10 offset-1">
+    <!-- News Section Content -->
+    <div class="row">
+        <div class="col-10 offset-1">
+            <!-- TODO: Make first tab expanded by default -->
+            <!-- TODO: Fix images -->
+            <!-- TODO: Add post permalink so users can pull up full-page post -->
+
             <div class="accordion" id="newsAccordion">
                 <?php
                 $args = array(
                     'post_type' => 'news_item',
-                    'posts_per_page' => 3
+                    'posts_per_page' => 5, 
+                    'meta_key' => 'news_item_date',
+                    'orderby' => 'meta_value_num',
+                    'order' => 'DESC'
                 );
-                $the_query = new WP_Query( $args ); ?>
+                $the_query = new WP_Query($args);
 
-                <?php if ( $the_query->have_posts() ) : ?>
+                if ($the_query->have_posts()) : 
+                    $index = 0;
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                        
+                        // Format the date
+                        $news_item_date = get_field('news_item_date');
+                        $formattedDate = preg_replace('/(\d{2})\/(\d{2})\/(\d{4})/', "$2/$1/$3", $news_item_date);
+                        
+                        // Generate HTML
+                        ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="newsHeading<?php the_ID(); ?>">
+                                <button 
+                                    class="accordion-button display-3 <?php echo $index === 0 ? '' : 'collapsed'; ?>" 
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#newsCollapse<?php the_ID(); ?>" 
+                                    aria-expanded="<?php echo $index === 0 ? 'true' : 'false'; ?>" 
+                                    aria-controls="newsCollapse<?php the_ID(); ?>">
+                                    <?php echo $formattedDate; ?>: <?php the_title(); ?>
+                                </button>
+                            </h2>
+                            <div id="newsCollapse<?php the_ID(); ?>" class="accordion-collapse collapse <?php echo $index === 0 ? 'show' : ''; ?>" aria-labelledby="newsHeading<?php the_ID(); ?>" data-bs-parent="#newsAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-6 offset-3 my-4">
+                                            <?php 
+                                            if (has_post_thumbnail()) {
+                                                the_post_thumbnail();
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <p class="lead two-columns">
+                                        <?php the_field('news_item_body'); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        $index++;
+                    endwhile;
 
-                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <h2><?php the_title(); ?></h2>
-                    <?php endwhile; ?>
+                    wp_reset_postdata();
+                endif;
+                ?>
+                <!-- TODO: Add archives button -->
+                <!-- TODO: Add archives page -->
 
-                    <?php wp_reset_postdata(); ?>
-
-                <?php endif; ?>
             </div>
-          </div>
         </div>
+    </div>
+
       </div>
     </section>
 
