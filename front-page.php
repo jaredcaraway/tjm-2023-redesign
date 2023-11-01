@@ -178,9 +178,15 @@ get_header(); ?>
                                     <div class="row">
                                         <div class="col-6 offset-3 my-4">
                                             <?php 
-                                            if (has_post_thumbnail()) {
-                                                the_post_thumbnail();
-                                            }
+                                            if (has_post_thumbnail()) { ?>
+                                                <img
+                                                    src="<?php the_post_thumbnail_url(); ?>"
+                                                    class="figure-img img-fluid rounded mx-auto d-block"
+                                                    /* TODO: Fill in alt text */
+                                                    alt=""
+                                                    style="max-width: 100%;"
+                                                />
+                                            <?php }
                                             ?>
                                         </div>
                                     </div>
