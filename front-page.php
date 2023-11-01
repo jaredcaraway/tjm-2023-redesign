@@ -140,6 +140,7 @@ get_header(); ?>
             <!-- TODO: Fix images -->
             <!-- TODO: Add post permalink so users can pull up full-page post -->
 
+            <!-- Begin news accordion -->
             <div class="accordion" id="newsAccordion">
                 <?php
                 $args = array(
@@ -206,6 +207,19 @@ get_header(); ?>
                 <!-- TODO: Add archives button -->
                 <!-- TODO: Add archives page -->
 
+            </div> <!-- End news accordion -->
+            <div class="row">
+                <!-- Finish styling button -->
+            <div class="col-12 col-xl-6">
+                      <a
+                        class="btn btn-success mb-2"
+                        href="https://www.lulu.com/shop/terry-jude-miller/the-butterfly-canonical/paperback/product-24047965.html?page=1&pageSize=4"
+                        target="_blank"
+                        rel="noopener"
+                        role="button"
+                        >Purchase a Copy</a
+                      >
+                    </div>
             </div>
         </div>
     </div>
