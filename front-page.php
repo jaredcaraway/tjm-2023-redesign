@@ -82,7 +82,7 @@ get_header(); ?>
           <!-- Omitting alt text on awards since these are purely decorative -->
           <figure class="figure col-6 col-sm-6 col-lg-3 mb-5">
             <img
-              src="assets/img/awards/award-img1.jpg"
+              src="<?php echo get_template_directory_uri() . '/assets/img/awards/award-img1.jpg' ?>"
               class="figure-img img-fluid rounded mx-auto d-block"
               alt=""
             />
@@ -93,7 +93,7 @@ get_header(); ?>
           </figure>
           <figure class="figure col-6 col-sm-6 col-lg-3 mb-5">
             <img
-              src="assets/img/awards/award-img2.jpg"
+              src="<?php echo get_template_directory_uri() . '/assets/img/awards/award-img2.jpg' ?>"
               class="figure-img img-fluid rounded mx-auto d-block"
               alt=""
             />
@@ -103,7 +103,7 @@ get_header(); ?>
           </figure>
           <figure class="figure col-6 col-sm-6 col-lg-3 mb-5">
             <img
-              src="assets/img/awards/award-img3.jpg"
+              src="<?php echo get_template_directory_uri() . '/assets/img/awards/award-img3.jpg' ?>"
               class="figure-img img-fluid rounded mx-auto d-block"
               alt=""
             />
@@ -113,7 +113,7 @@ get_header(); ?>
           </figure>
           <figure class="figure col-6 col-sm-6 col-lg-3 mb-5">
             <img
-              src="assets/img/awards/award-img4.jpg"
+              src="<?php echo get_template_directory_uri() . '/assets/img/awards/award-img4.jpg' ?>"
               class="figure-img img-fluid rounded mx-auto d-block"
               alt=""
             />
@@ -171,7 +171,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/books/the-butterfly-canonical-cover.jpeg"
+                src="<?php echo get_template_directory_uri() . '/assets/img/books/the-butterfly-canonical-cover.jpeg' ?>"
                 alt="Cover of The Butterfly Canonical, a book of poetry by Terry Jude Miller."
               />
             </div>
@@ -186,7 +186,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/books/what-if-i-find-only-moonlight-cover.jpeg"
+                src="<?php echo get_template_directory_uri() . '/assets/img/books/what-if-i-find-only-moonlight-cover.jpeg' ?>"
                 alt="Cover of What If I Find Only Moonlight, a book of poetry by Terry Jude Miller."
               />
             </div>
@@ -201,7 +201,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/books/the-drawn-cats-dream-cover.jpg"
+                src="<?php echo get_template_directory_uri() . '/assets/img/books/the-drawn-cats-dream-cover.jpg' ?>"
                 alt="Cover of The Drawn Cat's Dream, a book of poetry by Terry Jude Miller. It also features the text 'Poetry Society of Texas' beneath the title, and at the bottom it reads, 'Catherine Case Lubbe Manuscript Prize 2018.'"
               />
             </div>
@@ -238,7 +238,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/anthologies/the-ocotillo-review-summer-2018-cover-resized.webp"
+                src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/the-ocotillo-review-summer-2018-cover-resized.webp' ?>"
                 alt="Cover of the summer 2018 issue of The Ocotillo Review, a poetry journal."
               />
             </div>
@@ -253,7 +253,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/anthologies/ancient-paths-issue-17-cover-resized.jpg"
+                src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/ancient-paths-issue-17-cover-resized.jpg' ?>"
                 alt="Cover of issue 17 of Ancient Paths, a poetry journal."
               />
             </div>
@@ -268,7 +268,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/anthologies/southern-poetry-anthology-volume-viii-texas-cover-resized.jpg"
+                src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/southern-poetry-anthology-volume-viii-texas-cover-resized.jpg' ?>"
                 alt="Cover of The Southern Poetry Anthology volume VIII: Texas, a poetry journal."
               />
             </div>
@@ -284,7 +284,7 @@ get_header(); ?>
             >
               <img
                 class="img-fluid"
-                src="assets/img/anthologies/2019-texas-poetry-calendar-cover-resized.webp"
+                src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/2019-texas-poetry-calendar-cover-resized.webp' ?>"
                 alt="Cover of the 2019 Texas Poetry Calendar."
               />
             </div>
@@ -308,7 +308,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_YusefKonumyakaa_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_YusefKonumyakaa_RS.png' ?>"
                 alt="Terry Jude Miller & Yusef Komunyakaa smile and pose for a photo in business casual attire."
                 class="img-fluid rounded"
               />
@@ -321,7 +321,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_LiYoungLee_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_LiYoungLee_RS.png' ?>"
                 alt="Terry Jude Miller and Li-Young Lee smile and pose for a photo in business casual attire."
                 class="img-fluid rounded"
               />
@@ -335,7 +335,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_FriendswoodLibrary_FeaturedPoet_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_FriendswoodLibrary_FeaturedPoet_RS.png' ?>"
                 alt="Terry Jude Miller stands at a lectern reading a poem to an audience."
                 class="img-fluid rounded"
               />
@@ -349,7 +349,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_KayRyan_RobHaas_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_KayRyan_RobHaas_RS.png' ?>"
                 alt="Terry Jude Miller, Kay Ryan, and Robert Hass stand smiling together."
                 class="img-fluid rounded"
               />
@@ -363,7 +363,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_London_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_London_RS.png' ?>"
                 alt="Terry wears a jacket and newsboy cap as he poses for a photo with Big Ben clock tower in the near distance."
                 class="img-fluid rounded"
               />
@@ -376,7 +376,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_TempleOfSoulsRetreat_HangzhouChina_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_TempleOfSoulsRetreat_HangzhouChina_RS.png' ?>"
                 alt="Terry smiles standing in front of a wall with carved Chinese calligrapic characters filled with gold."
                 class="img-fluid rounded"
               />
@@ -390,7 +390,7 @@ get_header(); ?>
           <div class="col-md-6 col-lg-4 mb-5 text-center">
             <figure class="figure">
               <img
-                src="assets/img/photos/TJM_WWBirthplace_RS.png"
+                src="<?php echo get_template_directory_uri() . '/assets/img/photos/TJM_WWBirthplace_RS.png' ?>"
                 alt="Terry poses in an overcoat next to a bronze statue of Walt Whitman."
                 class="img-fluid rounded"
               />
@@ -649,20 +649,6 @@ get_header(); ?>
       </div>
       <!-- End container -->
     </section>
-    <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white">
-      <div class="container">
-        <small>Copyright &copy; Terry Jude Miller 2023</small><br />
-        <small>
-          Website design by
-          <a
-            href="mailto:jared.caraway@gmail.com"
-            target="_blank"
-            rel="noopener"
-            >Jared Caraway</a
-          ></small>
-      </div>
-    </div>
 
     <!-- TODO: Update modal container so it doesn't overflow, but the inner contents can scroll -->
     <!-- Books Modals-->
@@ -702,7 +688,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5 mx-auto d-block"
-                      src="assets/img/books/the-butterfly-canonical-cover.jpeg"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/books/the-butterfly-canonical-cover.jpeg' ?>"
                       alt="Cover of The Butterfly Canonical, a book of poetry by Terry Jude Miller."
                     />
                   </a>
@@ -785,7 +771,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5"
-                      src="assets/img/books/what-if-i-find-only-moonlight-cover.jpeg"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/books/what-if-i-find-only-moonlight-cover.jpeg' ?>"
                       alt="Cover of What If I Find Only Moonlight, a book of poetry by Terry Jude Miller."
                     />
                   </a>
@@ -856,7 +842,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5"
-                      src="assets/img/books/the-drawn-cats-dream-cover.jpg"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/books/the-drawn-cats-dream-cover.jpg' ?>"
                       alt="Cover of The Drawn Cat's Dream, a book of poetry by Terry Jude Miller. It also features the text 'Poetry Society of Texas' beneath the title, and at the bottom it reads, 'Catherine Case Lubbe Manuscript Prize 2018.'"
                     />
                   </a>
@@ -929,7 +915,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5 mx-auto d-block"
-                      src="assets/img/anthologies/the-ocotillo-review-summer-2018-cover-resized.webp"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/the-ocotillo-review-summer-2018-cover-resized.webp' ?>"
                       alt="Cover of the summer 2018 issue of The Ocotillo Review, a poetry journal."
                     />
                   </a>
@@ -1001,7 +987,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5"
-                      src="assets/img/anthologies/ancient-paths-issue-17-cover-resized.jpg"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/ancient-paths-issue-17-cover-resized.jpg' ?>"
                       alt="Cover of issue 17 of Ancient Paths, a poetry journal."
                     />
                   </a>
@@ -1073,7 +1059,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5"
-                      src="assets/img/anthologies/southern-poetry-anthology-volume-viii-texas-cover-resized.jpg"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/southern-poetry-anthology-volume-viii-texas-cover-resized.jpg' ?>"
                       alt="Cover of The Southern Poetry Anthology volume VIII: Texas, a poetry journal."
                     />
                   </a>
@@ -1143,7 +1129,7 @@ get_header(); ?>
                   >
                     <img
                       class="img-fluid rounded mb-5"
-                      src="assets/img/anthologies/2019-texas-poetry-calendar-cover-resized.webp"
+                      src="<?php echo get_template_directory_uri() . '/assets/img/anthologies/2019-texas-poetry-calendar-cover-resized.webp' ?>"
                       alt="Cover of the 2019 Texas Poetry Calendar."
                     />
                   </a>
@@ -1226,7 +1212,7 @@ get_header(); ?>
                       <div class="row">
                         <div class="col-6 offset-3">
                           <img
-                            src="assets/img/news/dalle-poet-award-placeholder.png"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/news/dalle-poet-award-placeholder.png' ?>"
                             alt="Terry smiles holding a Dundie award."
                             class="img-fluid rounded mx-auto d-block mb-3"
                           />
@@ -1274,7 +1260,7 @@ get_header(); ?>
                       <div class="row">
                         <div class="col-6 offset-3">
                           <img
-                            src="assets/img/news/dalle-verses-luminous-deep.png"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/news/dalle-verses-luminous-deep.png' ?>"
                             alt="Cover of Verses From the Luminous Deep, a poetry book by Terry Jude Miller."
                             class="img-fluid rounded mx-auto d-block mb-3"
                           />
@@ -1319,7 +1305,7 @@ get_header(); ?>
                       <div class="row">
                         <div class="col-6 offset-3">
                           <img
-                            src="assets/img/news/poetry-reading.png"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/news/poetry-reading.png' ?>"
                             alt="An empty podium in a cozy space next to a stack of poetry books surrounded by empty wooden chairs."
                             class="img-fluid rounded mx-auto d-block mb-3"
                           />
