@@ -32,7 +32,7 @@
 <!-- Navigation-->
 	<nav class="navbar navbar-expand-xl bg-secondary fixed-top" id="mainNav">
 		<div class="container">
-			<a class="navbar-brand text-uppercase" href="#page-top">
+			<a class="navbar-brand text-uppercase" href="<?php echo get_site_url() . '#page-top' ?>">
 			Terry Jude Miller
 			</a>
 			<button
@@ -50,7 +50,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item mx-0 mx-lg-1">
-				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo get_site_url() . '#about' ?>"
 					>About</a
 				>
 				</li>
@@ -60,22 +60,22 @@
 				>
 				</li>
 				<li class="nav-item mx-0 mx-lg-1">
-				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#books"
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo get_site_url() . '#books' ?>"
 					>Books</a
 				>
 				</li>
 				<li class="nav-item mx-0 mx-lg-1">
-				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#anthologies"
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo get_site_url() . '#anthologies' ?>"
 					>Anthologies</a
 				>
 				</li>
 				<li class="nav-item mx-0 mx-lg-1">
-				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#photos"
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo get_site_url() . '#photos' ?>"
 					>Photos</a
 				>
 				</li>
 				<li class="nav-item mx-0 mx-lg-1">
-				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#poems"
+				<a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo get_site_url() . '#poems' ?>"
 					>Poems</a
 				>
 				</li>
