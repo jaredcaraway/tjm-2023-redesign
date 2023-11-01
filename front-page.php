@@ -137,7 +137,22 @@ get_header(); ?>
         <div class="row">
           <div class="col-10 offset-1">
             <div class="accordion" id="newsAccordion">
-              <!-- Dynamically generated news items will be appended here -->
+                <?php
+                $args = array(
+                    'post_type' => 'news_item',
+                    'posts_per_page' => 3
+                );
+                $the_query = new WP_Query( $args ); ?>
+
+                <?php if ( $the_query->have_posts() ) : ?>
+
+                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <h2><?php the_title(); ?></h2>
+                    <?php endwhile; ?>
+
+                    <?php wp_reset_postdata(); ?>
+
+                <?php endif; ?>
             </div>
           </div>
         </div>
