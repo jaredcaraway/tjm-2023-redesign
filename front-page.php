@@ -194,6 +194,7 @@ get_header(); ?>
                                     <p class="lead two-columns">
                                         <?php the_field('news_item_body'); ?>
                                     </p>
+                                    <a href="<?php the_permalink(); ?>" target="_blank" class="btn btn-primary">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -210,14 +211,14 @@ get_header(); ?>
             </div> <!-- End news accordion -->
             <div class="row">
                 <!-- Finish styling button -->
-            <div class="col-12 col-xl-6">
+            <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
                       <a
-                        class="btn btn-success mb-2"
-                        href="https://www.lulu.com/shop/terry-jude-miller/the-butterfly-canonical/paperback/product-24047965.html?page=1&pageSize=4"
+                        class="btn btn-primary mb-2"
+                        href="#"
                         target="_blank"
                         rel="noopener"
                         role="button"
-                        >Purchase a Copy</a
+                        >View Past Updates</a
                       >
                     </div>
             </div>
