@@ -55,7 +55,7 @@
 				>
 				</li>
 				<li class="nav-item mx-0 mx-lg-1">
-				<a href="#news" class="nav-link py-3 px-0 px-lg-3 rounded"
+				<a href="<?php echo get_site_url() . '#news' ?>" class="nav-link py-3 px-0 px-lg-3 rounded"
 					>News</a
 				>
 				</li>
