@@ -214,8 +214,7 @@ get_header(); ?>
             <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
                       <a
                         class="btn btn-primary mb-2"
-                        href="#"
-                        target="_blank"
+                        href="<?php echo get_site_url() . '/news' ?>"
                         rel="noopener"
                         role="button"
                         >View Past Updates</a
