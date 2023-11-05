@@ -11519,3 +11519,38 @@ html {
 .single-news, .post-type-archive-news {
   padding-top: calc(6rem + 74px);
 }
+
+.two-columns {
+  column-count: 1;
+  column-gap: 20px;
+  text-align: justify;
+}
+
+span.no-wrap {
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .two-columns {
+    column-count: 2;
+    column-gap: 80px;
+  }
+}
+
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  
+  /* Aspect Ratio 16:9 */
+  padding-top: 56.25%;
+}
+
+.thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
