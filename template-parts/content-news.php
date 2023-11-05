@@ -18,14 +18,9 @@
             </div><!-- .entry-meta -->
         </header><!-- .entry-header -->
 
-        <div class="entry-content">
+        <div class="entry-content container">
             <?php
-            the_content();
-
-            wp_link_pages( array(
-                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tjm-2023-redesign' ),
-                'after'  => '</div>',
-            ) );
+            the_field('news_item_body');
             ?>
         </div><!-- .entry-content -->
 
