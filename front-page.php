@@ -136,9 +136,6 @@ get_header(); ?>
     <!-- News Section Content -->
     <div class="row">
         <div class="col-10 offset-1">
-            <!-- TODO: Make first tab expanded by default -->
-            <!-- TODO: Fix images -->
-            <!-- TODO: Add post permalink so users can pull up full-page post -->
 
             <!-- Begin news accordion -->
             <div class="accordion" id="newsAccordion">
@@ -205,8 +202,6 @@ get_header(); ?>
                     wp_reset_postdata();
                 endif;
                 ?>
-                <!-- TODO: Add archives button -->
-                <!-- TODO: Add archives page -->
 
             </div> <!-- End news accordion -->
             <div class="row">
@@ -487,7 +482,6 @@ get_header(); ?>
     </section>
 
     <!-- Poems Section-->
-    <!-- TODO: Finish styling poems section -->
     
     <section class="page-section poems text-white bg-primary" id="poems">
       <div class="container">
@@ -733,7 +727,6 @@ get_header(); ?>
       <!-- End container -->
     </section>
 
-    <!-- TODO: Update modal container so it doesn't overflow, but the inner contents can scroll -->
     <!-- Books Modals-->
     <!-- Books Modal 1-->
     <div
@@ -1248,7 +1241,6 @@ get_header(); ?>
       </div>
     </div>
 
-    <!-- TODO: Adjust width of archive modal -->
     <!-- News Archive Modal -->
     <div
       class="modal fade"
