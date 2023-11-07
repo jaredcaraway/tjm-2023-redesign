@@ -15,7 +15,7 @@
             <?php the_title('<h1 class="entry-title text-center">', '</h1>'); ?>
             <div class="entry-meta"><!-- .entry-meta -->
                 <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-line d-none d-sm-block"></div>
                     <div class="divider-custom-icon">
                         <span class="posted-on">
                             <?php
@@ -27,7 +27,7 @@
                         </span>
                     </div>
                     
-                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-line d-none d-sm-block"></div>
                 </div>
             </div><!-- .entry-meta -->
         </header><!-- .entry-header -->

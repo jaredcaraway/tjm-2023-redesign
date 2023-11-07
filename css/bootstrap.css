@@ -11554,3 +11554,8 @@ span.no-wrap {
   object-fit: cover;
   object-position: center;
 }
+
+.posted-on {
+  font-size: 25px;
+  vertical-align: text-bottom;
+}
