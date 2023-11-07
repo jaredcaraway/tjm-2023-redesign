@@ -33,9 +33,13 @@
         </header><!-- .entry-header -->
 
         <div class="entry-content container">
-            <?php
-            the_field('news_item_body');
-            ?>
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <?php
+                    the_field('news_item_body');
+                    ?>
+                </div>
+            </div>
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
