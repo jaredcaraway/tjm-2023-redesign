@@ -11559,3 +11559,8 @@ span.no-wrap {
   font-size: 25px;
   vertical-align: text-bottom;
 }
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}

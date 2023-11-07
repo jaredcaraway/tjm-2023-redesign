@@ -10,30 +10,36 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 	<div class="container">
 		<?php
-		while ( have_posts() ) :
+		while (have_posts()):
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'tjm-2023-redesign' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'tjm-2023-redesign' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
+			get_template_part('template-parts/content', get_post_type());
+			?>
+			<div class="row">
+				<div class="col-8 mx-auto my-4">
+					<?php
+					the_post_navigation(
+						array(
+							'prev_text' => '<span class="nav-title btn btn-primary"><i class="fa-solid fa-arrow-left"></i> %title</span>',
+							'next_text' => '<span class="nav-title btn btn-primary">%title <i class="fa-solid fa-arrow-right"></i></span>',
+						)
+					);
+					?>
+				</div>
+			</div>
+			<?php
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
+			if (comments_open() || get_comments_number()):
 				comments_template();
 			endif;
 
 		endwhile; // End of the loop.
 		?>
 	</div>
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_footer();
