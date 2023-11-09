@@ -124,36 +124,74 @@ get_header(); ?>
       <!-- News Section Content -->
       <div class="row">
         <div class="col-10 offset-1">
-          <div id="carouselExample" class="carousel slide">
+          <!-- Begin news carousel -->
+          <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://picsum.photos/800/400?random=1" class="d-block w-100 rounded" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/800/400?random=2" class="d-block w-100 rounded" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/800/400?random=3" class="d-block w-100 rounded" alt="...">
-              </div>
+
+              <?php
+              $args = array(
+                'post_type' => 'news',
+                'posts_per_page' => 3,
+                // Change to 3 to get the 3 most recent posts
+                'meta_key' => 'news_item_date',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC'
+              );
+              $the_query = new WP_Query($args);
+              $index = 0;
+
+              if ($the_query->have_posts()):
+                while ($the_query->have_posts()):
+                  $the_query->the_post();
+                  $active_class = $index === 0 ? 'active' : ''; // First item is active
+                  $featured_img_url = has_post_thumbnail() ? get_the_post_thumbnail_url() : "https://picsum.photos/800/400?random={$index}";
+                  ?>
+
+                  <div class="carousel-item <?php echo $active_class; ?>">
+                    <img src="<?php echo $featured_img_url; ?>" class="d-block w-100" alt="<?php the_title(); ?>">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5><a href="<?php the_permalink(); ?>" target="_blank">
+                          <?php the_title(); ?>
+                        </a></h5>
+                    </div>
+                  </div>
+
+                  <?php
+                  $index++;
+                endwhile;
+                wp_reset_postdata();
+              endif;
+              ?>
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
-          <div class="row">
-            <!-- Finish styling button -->
-            <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
-              <a class="btn btn-primary mb-2" href="<?php echo get_site_url() . '/news' ?>" rel="noopener"
-                role="button">View Past Updates</a>
-            </div>
+          </div> <!-- End news carousel -->
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="row">
+          <!-- Finish styling button -->
+          <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
+            <a class="btn btn-primary mb-2" href="<?php echo get_site_url() . '/news' ?>" rel="noopener"
+              role="button">View Past Updates</a>
           </div>
         </div>
       </div>
+    </div>
 
     </div>
   </section>
@@ -915,4 +953,4 @@ get_header(); ?>
 
 </main><!-- #main -->
 
-<?php get_footer(); ?>
+<?php get_footer();

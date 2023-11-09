@@ -20,6 +20,7 @@ get_header();
 			?>
 			<div class="row">
 				<div class="col-8 mx-auto my-4">
+					<!-- TODO: Finish styling buttons -->
 					<?php
 					the_post_navigation(
 						array(
