@@ -11564,3 +11564,24 @@ span.no-wrap {
   display: flex;
   justify-content: space-around;
 }
+
+.carousel-item {
+  height: 400px; /* set a fixed height for the slide container */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* stretch the image to fill the container while maintaining its aspect ratio */
+  object-position: center; /* display the center part of the image in the visible part of the slide container */
+  overflow: hidden; /* hide any part of the image that overflows the container */
+}
+
+.carousel-caption {
+  background-color: black;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  opacity: 0.8;
+}
