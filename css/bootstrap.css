@@ -6126,7 +6126,7 @@ fieldset:disabled .btn {
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -11563,6 +11563,42 @@ span.no-wrap {
 .nav-links {
   display: flex;
   justify-content: space-around;
+}
+
+.carousel-item {
+  height: 400px; /* set a fixed height for the slide container */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* stretch the image to fill the container while maintaining its aspect ratio */
+  object-position: center; /* display the center part of the image in the visible part of the slide container */
+  overflow: hidden; /* hide any part of the image that overflows the container */
+}
+
+.carousel-caption {
+  background-color: black;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  opacity: 0.8;
+  width: fit-content; 
+}
+
+.carousel-caption a {
+  color: #fff;
+}
+
+.carousel-control-prev {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
+}
+
+.carousel-control-next {
+  background: rgb(0,0,0);
+  background: linear-gradient(270deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
 }
 
 .nav-title {
