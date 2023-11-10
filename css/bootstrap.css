@@ -11564,3 +11564,12 @@ span.no-wrap {
   display: flex;
   justify-content: space-around;
 }
+
+.nav-title {
+  max-width: 270px;
+  font-size: 20px;
+}
+
+.entry-title {
+  text-wrap: balance;
+}
