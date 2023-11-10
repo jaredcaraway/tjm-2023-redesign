@@ -6126,7 +6126,7 @@ fieldset:disabled .btn {
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -11589,4 +11589,14 @@ span.no-wrap {
 
 .carousel-caption a {
   color: #fff;
+}
+
+.carousel-control-prev {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
+}
+
+.carousel-control-next {
+  background: rgb(0,0,0);
+  background: linear-gradient(270deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
 }
