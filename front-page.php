@@ -189,7 +189,7 @@ get_header(); ?>
                                         </div>
                                     </div>
                                     <p class="lead two-columns">
-                                        <?php the_field('news_item_body'); ?>
+                                        <?php the_content(); ?>
                                     </p>
                                     <a href="<?php the_permalink(); ?>" target="_blank" class="btn btn-primary">Read More</a>
                                 </div>
