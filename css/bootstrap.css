@@ -11585,6 +11585,7 @@ span.no-wrap {
   border-radius: 20px;
   opacity: 0.8;
   width: fit-content; 
+  text-wrap: balance;
 }
 
 .carousel-caption a {
