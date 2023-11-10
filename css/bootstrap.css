@@ -11581,7 +11581,12 @@ span.no-wrap {
   background-color: black;
   color: #fff;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   opacity: 0.8;
+  width: fit-content; 
+}
+
+.carousel-caption a {
+  color: #fff;
 }
