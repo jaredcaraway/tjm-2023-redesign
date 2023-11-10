@@ -145,8 +145,8 @@ get_header(); ?>
 
                   <div class="carousel-item <?php echo $active_class; ?>">
                     <img src="<?php echo $featured_img_url; ?>" class="d-block w-100 rounded" alt="<?php the_title(); ?>">
-                    <div class="carousel-caption d-none d-md-block">
-                      <a href="<?php the_permalink(); ?>" target="_blank">
+                    <div class="carousel-caption d-none d-md-block mx-auto">
+                      <a href="<?php the_permalink(); ?>" target="_blank" tabindex="0">
                           <?php the_title(); ?>
                       </a>
                     </div>
