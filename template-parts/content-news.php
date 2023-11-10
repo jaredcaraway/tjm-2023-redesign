@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-8 mx-auto">
                     <?php
-                    the_field('news_item_body');
+                    the_content();
                     ?>
                 </div>
             </div>
