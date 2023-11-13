@@ -12,29 +12,37 @@ get_header();
 
 <main id="primary" class="site-main">
     <div class="container">
-        <?php if ( have_posts() ) : ?>
+        <?php if (have_posts()): ?>
             <header class="page-header">
-                <?php
-                the_archive_title( '<h1 class="page-title">', '</h1>' );
-                the_archive_description( '<div class="archive-description">', '</div>' );
-                ?>
+                <h1 class="entry-title text-center">News Archives</h1>
             </header><!-- .page-header -->
-            <h1>NEWS ITEM ARCHIVES</h1>
+
             <?php
-        
+
             /* Start the Loop */
-            while ( have_posts() ) :
+            while (have_posts()):
                 the_post();
-                /*
-                 * Include the Post-Type-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                 */
-                get_template_part( 'template-parts/content', get_post_type() );
+                // /*
+                //  * Include the Post-Type-specific template for the content.
+                //  * If you want to override this in a child theme, then include a file
+                //  * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                //  */
+                // get_template_part( 'template-parts/content', get_post_type() );
+                ?>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            <?php
             endwhile;
             the_posts_navigation();
-        else :
-            get_template_part( 'template-parts/content', 'none' );
+        else:
+            get_template_part('template-parts/content', 'none');
         endif;
         ?>
     </div>
