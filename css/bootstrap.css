@@ -11512,12 +11512,14 @@ html {
 /* News post type styles */
 @media (min-width: 992px) {
   .single-news, .post-type-archive-news {
-    padding-top: calc(6rem + 104px);
+    padding-top: calc(3rem + 104px);
   }
 }
 
-.single-news, .post-type-archive-news {
-  padding-top: calc(6rem + 74px);
+@media (max-width: 991px) {
+  .single-news, .post-type-archive-news {
+    padding-top: calc(1rem + 74px);
+  }
 }
 
 .two-columns {
@@ -11623,4 +11625,13 @@ span.no-wrap {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+.post-link-button > h2 {
+  font-weight: 400;
+  font-size: 25px;
 }

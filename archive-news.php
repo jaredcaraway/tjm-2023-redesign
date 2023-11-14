@@ -16,7 +16,7 @@ get_header();
             <header class="page-header">
                 <h1 class="entry-title text-center mb-4">News Archives</h1>
             </header><!-- .page-header -->
-            <div class="row">
+            <div class="row d-flex mb-5 align-items-stretch">
                 <?php
 
                 /* Start the Loop */
@@ -30,7 +30,7 @@ get_header();
                     // get_template_part( 'template-parts/content', get_post_type() );
                     ?>
                     <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="card">
+                        <div class="card mb-4">
                             <?php if (has_post_thumbnail()): ?>
                                 <div class="post-thumbnail">
                                     <?php
@@ -40,8 +40,8 @@ get_header();
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
-                                <h2 class="card-title ">Card title</h2>
-                                <p class="card-text">
+                                <!--<h2 class="card-title"></h2>-->
+                                <p class="card-text text-center">
                                     <?php
                                     printf(
                                         esc_html__('%s', 'tjm-2023-redesign'),
@@ -49,7 +49,7 @@ get_header();
                                     );
                                     ?>
                                 </p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary post-link-button"><h2><?php echo esc_html(get_the_title()); ?></h2></a>
                             </div><!-- .card-body -->
                         </div><!-- .card -->
                     </div><!-- .col -->
