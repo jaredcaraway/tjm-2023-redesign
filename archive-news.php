@@ -14,7 +14,7 @@ get_header();
     <div class="container">
         <?php if (have_posts()): ?>
             <header class="page-header">
-                <h1 class="entry-title text-center">News Archives</h1>
+                <h1 class="entry-title text-center mb-4">News Archives</h1>
             </header><!-- .page-header -->
             <div class="row">
                 <?php
@@ -29,11 +29,18 @@ get_header();
                     //  */
                     // get_template_part( 'template-parts/content', get_post_type() );
                     ?>
-                    <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="col-12 col-sm-6 col-xl-3">
                         <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
+                            <?php if (has_post_thumbnail()): ?>
+                                <div class="post-thumbnail">
+                                    <?php
+                                    $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
+                                    echo '<img src="' . esc_url($thumbnail[0]) . '" alt="' . esc_attr(get_the_title()) . '">';
+                                    ?>
+                                </div>
+                            <?php endif; ?>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h2 class="card-title ">Card title</h2>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                     card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>

@@ -11610,3 +11610,17 @@ span.no-wrap {
 .entry-title {
   text-wrap: balance;
 }
+
+.post-thumbnail {
+  object-position: center;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 7px;
+  margin: 8px;
+}
+
+.post-thumbnail > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
