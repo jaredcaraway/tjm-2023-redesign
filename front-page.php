@@ -129,10 +129,9 @@ get_header(); ?>
               $args = array(
                 'post_type' => 'news',
                 'posts_per_page' => 3,
-                'meta_key' => 'news_item_date',
-                'orderby' => 'meta_value_num',
-                'order' => 'DESC'
-              );
+                'orderby' => 'date', // Order by post date
+                'order' => 'DESC' // Descending order
+              );              
               $the_query = new WP_Query($args);
               $index = 0;
 
