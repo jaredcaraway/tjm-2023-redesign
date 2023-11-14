@@ -29,8 +29,8 @@ get_header();
                     //  */
                     // get_template_part( 'template-parts/content', get_post_type() );
                     ?>
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="card mb-4">
+                    <div class="col-12 col-sm-6 col-xl-3 mb-4">
+                        <div class="card archive-card">
                             <?php if (has_post_thumbnail()): ?>
                                 <div class="post-thumbnail">
                                     <?php

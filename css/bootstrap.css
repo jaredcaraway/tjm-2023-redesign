@@ -4355,9 +4355,12 @@ fieldset:disabled .btn {
 }
 
 .card-body {
+  display: flex;
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card-title {
@@ -11633,5 +11636,9 @@ span.no-wrap {
 
 .post-link-button > h2 {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.archive-card {
+  height: 100%;
 }
