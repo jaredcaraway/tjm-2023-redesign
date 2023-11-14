@@ -41,12 +41,18 @@ get_header();
                             <?php endif; ?>
                             <div class="card-body">
                                 <h2 class="card-title ">Card title</h2>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                    card's content.</p>
+                                <p class="card-text">
+                                    <?php
+                                    printf(
+                                        esc_html__('%s', 'tjm-2023-redesign'),
+                                        get_the_time(esc_html__('F j, Y', 'tjm-2023-redesign'))
+                                    );
+                                    ?>
+                                </p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+                            </div><!-- .card-body -->
+                        </div><!-- .card -->
+                    </div><!-- .col -->
                 <?php
                 endwhile;
                 the_posts_navigation();
@@ -54,8 +60,8 @@ get_header();
                 get_template_part('template-parts/content', 'none');
             endif;
             ?>
-            </div> <!-- End row -->
-    </div><!--
+            </div> <!-- .row -->
+    </div><!-- .container -->
 
 </main><!-- #main -->
 
