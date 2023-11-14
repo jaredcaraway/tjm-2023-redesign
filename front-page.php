@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The template for displaying the front page
+ * The template for displaying the front page.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#front-page-display
  *
