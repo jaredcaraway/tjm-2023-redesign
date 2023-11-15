@@ -31,12 +31,15 @@ get_header();
                     ?>
                     <div class="col-12 col-sm-6 col-xl-3 mb-4">
                         <div class="card archive-card">
+                            <!-- TODO: Add responsive images -->
                             <?php if (has_post_thumbnail()): ?>
                                 <div class="post-thumbnail">
+                                    <a href="<?php the_permalink(); ?>">
                                     <?php
                                     $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
                                     echo '<img src="' . esc_url($thumbnail[0]) . '" alt="' . esc_attr(get_the_title()) . '">';
                                     ?>
+                                    </a>
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
@@ -49,7 +52,7 @@ get_header();
                                     );
                                     ?>
                                 </p>
-                                <a href="#" class="btn btn-primary post-link-button"><h2><?php echo esc_html(get_the_title()); ?></h2></a>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-primary post-link-button"><h2><?php echo esc_html(get_the_title()); ?></h2></a>
                             </div><!-- .card-body -->
                         </div><!-- .card -->
                     </div><!-- .col -->
