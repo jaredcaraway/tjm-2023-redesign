@@ -11643,3 +11643,16 @@ span.no-wrap {
 .archive-card {
   height: 100%;
 }
+
+.featured-image {
+  max-height: 300px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.featured-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
