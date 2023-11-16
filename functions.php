@@ -160,3 +160,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function tjm_2023_redesign_breadcrumb() {
+	if ( ! is_home() ) {
+		echo '<nav aria-label="breadcrumb">';
+		echo '<ol class="breadcrumb">';
+		echo '<li class="breadcrumb-item"><a href="' . esc_url( home_url() ) . '">Home</a></li>';
+
+		if ( is_category() || is_single() ) {
+			$categories = get_the_category();
+			if ( $categories ) {
+				foreach ( $categories as $category ) {
+					echo '<li class="breadcrumb-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
+				}
+			}
+		}
+
+		if ( is_single() ) {
+			echo '<li class="breadcrumb-item active" aria-current="page">' . esc_html( get_the_title() ) . '</li>';
+		}
+
+		echo '</ol>';
+		echo '</nav>';
+	}
+}
