@@ -11568,6 +11568,7 @@ span.no-wrap {
 .nav-links {
   display: flex;
   justify-content: space-around;
+  gap: 15px;
 }
 
 .carousel-item {
@@ -11655,4 +11656,16 @@ span.no-wrap {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (min-width: 768px) {
+  .featured-image {
+    max-height: 375px;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-image {
+    max-height: 200px;
+  }
 }
