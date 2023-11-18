@@ -11571,6 +11571,13 @@ span.no-wrap {
   gap: 15px;
 }
 
+@media (max-width: 767px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .carousel-item {
   height: 400px; /* set a fixed height for the slide container */
 }
@@ -11668,4 +11675,42 @@ span.no-wrap {
   .featured-image {
     max-height: 200px;
   }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+}
+
+.breadcrumb-item {
+  display: flex;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/"; 
+  padding: 0 0.5rem; 
+  color: #6c757d;
+  white-space: nowrap;
+}
+.breadcrumb-item .breadcrumb-link {
+  color: #007bff;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+
+.breadcrumb-item .breadcrumb-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active .breadcrumb-link {
+  color: #fff;
+  background-color: #007bff;
 }
