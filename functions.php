@@ -107,14 +107,28 @@ function tjm_2023_redesign_scripts() {
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', array(), _S_VERSION );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/styles.css', array(), _S_VERSION );
 
-	// wp_enqueue_script( 'tjm-2023-redesign-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'tjm-2023-redesign-navigation', get_template_directory_uri() . '/js/scripts.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tjm-2023-redesign-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tjm-2023-redesign-custom-js', get_template_directory_uri() . '/js/scripts.js', array('bootstrap-js'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tjm_2023_redesign_scripts' );
+
+function tjm_2023_redesign_enqueue_bootstrap_script() {
+    // Enqueue Bootstrap Script`
+    wp_enqueue_script(
+        'bootstrap-js', // Handle
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js', // Source
+        array(), // Dependencies (if any)
+        '5.2.3', // Version number
+        true // Load in footer
+    );
+}
+
+add_action('wp_footer', 'tjm_2023_redesign_enqueue_bootstrap_script');
+
 
 function add_preconnect_links() {
     echo '<link rel="preconnect" href="https://fonts.googleapis.com" />';
@@ -160,26 +174,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function tjm_2023_redesign_breadcrumb() {
-	if ( ! is_home() ) {
-		echo '<nav aria-label="breadcrumb">';
-		echo '<ol class="breadcrumb">';
-		echo '<li class="breadcrumb-item"><a href="' . esc_url( home_url() ) . '">Home</a></li>';
+// function tjm_2023_redesign_breadcrumb() {
+// 	if ( ! is_home() && ! is_front_page() ) {
+// 		echo '<nav aria-label="breadcrumb">';
+// 		echo '<ol class="breadcrumb">';
+// 		echo '<li class="breadcrumb-item"><a href="' . esc_url( home_url() ) . '">Home</a></li>';
 
-		if ( is_category() || is_single() ) {
-			$categories = get_the_category();
-			if ( $categories ) {
-				foreach ( $categories as $category ) {
-					echo '<li class="breadcrumb-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
-				}
-			}
-		}
+// 		// Add the News page link for posts
+// 		if ( is_single() && get_post_type() == 'news' ) {
+// 			// Replace 'news-page-slug' with the actual slug of your News page
+// 			$news_page_url = get_permalink( get_page_by_path( 'news' ) );
+// 			echo '<li class="breadcrumb-item"><a href="' . esc_url( $news_page_url ) . '">News</a></li>';
+// 		}
 
-		if ( is_single() ) {
-			echo '<li class="breadcrumb-item active" aria-current="page">' . esc_html( get_the_title() ) . '</li>';
-		}
+// 		if ( is_category() || is_single() ) {
+// 			$categories = get_the_category();
+// 			if ( $categories ) {
+// 				foreach ( $categories as $category ) {
+// 					echo '<li class="breadcrumb-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
+// 				}
+// 			}
+// 		}
 
-		echo '</ol>';
-		echo '</nav>';
-	}
-}
+// 		if ( is_single() ) {
+// 			echo '<li class="breadcrumb-item active" aria-current="page">' . esc_html( get_the_title() ) . '</li>';
+// 		}
+
+// 		echo '</ol>';
+// 		echo '</nav>';
+// 	}
+// }
