@@ -10,8 +10,8 @@
 ?>
 <!-- <?php tjm_2023_redesign_breadcrumb(); ?> -->
 
-<div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
-    <a class="btn btn-primary mb-2 nav-title" href="<?php echo get_site_url() . '/news' ?>" rel="noopener" role="button"><i class="fa-solid fa-newspaper pe-2 nav-title"></i>Back to News Archives</a>
+<div class="col-12 col-xl-6 mt-4">
+    <a class="btn btn-primary mb-4 nav-title" href="<?php echo get_site_url() . '/news' ?>" rel="noopener" role="button"><i class="fa-solid fa-newspaper pe-2 nav-title"></i>Back to News Archives</a>
 </div>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
