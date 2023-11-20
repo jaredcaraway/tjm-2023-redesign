@@ -11336,7 +11336,7 @@ html {
 }
 
 .masthead {
-  padding-top: calc(6rem + 74px);
+  padding-top: calc(3rem + 74px);
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
@@ -11712,4 +11712,15 @@ span.no-wrap {
 .breadcrumb-item.active .breadcrumb-link {
   color: #fff;
   background-color: #007bff;
+}
+
+.carousel-date {
+  position: absolute;
+  top: 20px;
+  left: 12%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
 }
