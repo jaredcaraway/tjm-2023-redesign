@@ -174,33 +174,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// function tjm_2023_redesign_breadcrumb() {
-// 	if ( ! is_home() && ! is_front_page() ) {
-// 		echo '<nav aria-label="breadcrumb">';
-// 		echo '<ol class="breadcrumb">';
-// 		echo '<li class="breadcrumb-item"><a href="' . esc_url( home_url() ) . '">Home</a></li>';
+function tjm_2023_redesign_breadcrumb() {
+	if ( ! is_home() && ! is_front_page() ) {
+		echo '<nav aria-label="breadcrumb">';
+		echo '<ol class="breadcrumb">';
+		echo '<li class="breadcrumb-item"><a href="' . esc_url( home_url() ) . '">Home</a></li>';
 
-// 		// Add the News page link for posts
-// 		if ( is_single() && get_post_type() == 'news' ) {
-// 			// Replace 'news-page-slug' with the actual slug of your News page
-// 			$news_page_url = get_permalink( get_page_by_path( 'news' ) );
-// 			echo '<li class="breadcrumb-item"><a href="' . esc_url( $news_page_url ) . '">News</a></li>';
-// 		}
+		// Add the News page link for posts
+		if ( is_single() && get_post_type() == 'news' ) {
+			// Replace 'news-page-slug' with the actual slug of your News page
+			$news_page_url = get_permalink( get_page_by_path( 'news' ) );
+			echo '<li class="breadcrumb-item"><a href="' . esc_url( $news_page_url ) . '">News</a></li>';
+		}
 
-// 		if ( is_category() || is_single() ) {
-// 			$categories = get_the_category();
-// 			if ( $categories ) {
-// 				foreach ( $categories as $category ) {
-// 					echo '<li class="breadcrumb-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
-// 				}
-// 			}
-// 		}
+		if ( is_category() || is_single() ) {
+			$categories = get_the_category();
+			if ( $categories ) {
+				foreach ( $categories as $category ) {
+					echo '<li class="breadcrumb-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
+				}
+			}
+		}
 
-// 		if ( is_single() ) {
-// 			echo '<li class="breadcrumb-item active" aria-current="page">' . esc_html( get_the_title() ) . '</li>';
-// 		}
+		if ( is_single() ) {
+			echo '<li class="breadcrumb-item active" aria-current="page">' . esc_html( get_the_title() ) . '</li>';
+		}
 
-// 		echo '</ol>';
-// 		echo '</nav>';
-// 	}
-// }
+		echo '</ol>';
+		echo '</nav>';
+	}
+}
