@@ -23,8 +23,8 @@ get_header();
 					<?php
 					the_post_navigation(
 						array(
-							'prev_text' => '<span class="nav-title btn btn-primary"><i class="fa-solid fa-arrow-left"></i> %title</span>',
-							'next_text' => '<span class="nav-title btn btn-primary">%title <i class="fa-solid fa-arrow-right"></i></span>',
+							'prev_text' => '<span class="nav-title btn btn-primary"><i class="fa-solid fa-arrow-left"></i> ' . get_the_date('m/d/y') . ': %title</span>',
+							'next_text' => '<span class="nav-title btn btn-primary">' . get_the_date('m/d/y') .': %title ' .  '<i class="fa-solid fa-arrow-right"></i></span>',
 						)
 					);
 					?>
