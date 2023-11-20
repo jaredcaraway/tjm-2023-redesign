@@ -172,8 +172,8 @@ get_header(); ?>
         <div class="row">
           <!-- Finish styling button -->
           <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
-            <a class="btn btn-primary mb-2" href="<?php echo get_site_url() . '/news' ?>" rel="noopener"
-              role="button">View Past Updates</a>
+            <a class="btn btn-primary mb-2 nav-title" href="<?php echo get_site_url() . '/news' ?>" 
+              role="button"><i class="fa-solid fa-newspaper pe-3"></i>View the News Archives</a>
           </div>
         </div>
       </div>

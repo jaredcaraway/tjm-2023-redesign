@@ -8,13 +8,17 @@
  */
 
 ?>
-<?php tjm_2023_redesign_breadcrumb(); ?>
+<!-- <?php tjm_2023_redesign_breadcrumb(); ?> -->
+
+<div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
+    <a class="btn btn-primary mb-2 nav-title" href="<?php echo get_site_url() . '/news' ?>" rel="noopener" role="button"><i class="fa-solid fa-newspaper pe-2 nav-title"></i>Back to News Archives</a>
+</div>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
     <div class="container">
         <header class="entry-header">
             <?php the_title('<h1 class="entry-title text-center">', '</h1>'); ?>
-            <?php if (has_post_thumbnail()) : ?>
+            <?php if (has_post_thumbnail()): ?>
                 <div class="row">
                     <div class="featured-image col-6 mx-auto mt-3 rounded">
                         <?php the_post_thumbnail('large', array('class' => 'rounded')); ?>
