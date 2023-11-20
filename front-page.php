@@ -14,12 +14,13 @@ get_header(); ?>
   <!-- Masthead-->
   <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
+      <!-- Masthead Heading-->
+      <h1 class="masthead-heading text-uppercase mb-3">Terry Jude Miller</h1>
       <!-- Masthead Avatar Image-->
       <img class="masthead-avatar mb-4"
         src="<?php echo get_template_directory_uri() . '/assets/img/terry-jude-miller-portrait-no-bg.png' ?>"
         alt="Portrait of Texas poet Terry Jude Miller wearing a black shirt and gray suit jacket." />
-      <!-- Masthead Heading-->
-      <h1 class="masthead-heading text-uppercase mb-0">Terry Jude Miller</h1>
+
       <!-- Masthead Subheading-->
       <p class="masthead-subheading font-weight-light mb-0 mt-4">
         Poet based in Richmond, Texas
@@ -129,9 +130,10 @@ get_header(); ?>
               $args = array(
                 'post_type' => 'news',
                 'posts_per_page' => 3,
-                'orderby' => 'date', // Order by post date
+                'orderby' => 'date',
+                // Order by post date
                 'order' => 'DESC' // Descending order
-              );              
+              );
               $the_query = new WP_Query($args);
               $index = 0;
 
@@ -143,10 +145,15 @@ get_header(); ?>
                   ?>
 
                   <div class="carousel-item <?php echo $active_class; ?>">
-                    <img src="<?php echo $featured_img_url; ?>" class="d-block w-100 rounded" alt="<?php the_title(); ?>">
+                    <div class="carousel-date">
+                      <?php echo get_the_date('M. j, Y'); ?>
+                    </div>
+                    <a href="<?php the_permalink(); ?>" tabindex="0">
+                      <img src="<?php echo $featured_img_url; ?>" class="d-block w-100 rounded" alt="<?php the_title(); ?>">
+                    </a>
                     <div class="carousel-caption d-block mx-auto">
-                      <a href="<?php the_permalink(); ?>" target="_blank" tabindex="0">
-                          <?php the_title(); ?>
+                      <a href="<?php the_permalink(); ?>" tabindex="0">
+                        <?php the_title(); ?>
                       </a>
                     </div>
                   </div>
@@ -172,8 +179,8 @@ get_header(); ?>
         <div class="row">
           <!-- Finish styling button -->
           <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
-            <a class="btn btn-primary mb-2 nav-title" href="<?php echo get_site_url() . '/news' ?>" 
-              role="button"><i class="fa-solid fa-newspaper pe-3"></i>View the News Archives</a>
+            <a class="btn btn-primary mb-2 nav-title" href="<?php echo get_site_url() . '/news' ?>" role="button"><i
+                class="fa-solid fa-newspaper pe-3"></i>View the News Archives</a>
           </div>
         </div>
       </div>
