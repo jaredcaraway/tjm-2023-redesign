@@ -11728,3 +11728,12 @@ span.no-wrap {
 .poem-nav-divider .nav-link {
   line-height: 1.4rem;
 }
+
+.carousel.no-controls .carousel-control-prev,
+.carousel.no-controls .carousel-control-next {
+  display: none;
+}
+
+.card-text {
+  font-size: 20px;
+}

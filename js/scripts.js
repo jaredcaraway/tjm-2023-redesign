@@ -46,4 +46,11 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    var carousel = document.querySelector('#carouselExampleIndicators');
+    var items = carousel.querySelectorAll('.carousel-item');
+    
+    if (items.length <= 1) {
+        carousel.classList.add('no-controls');
+    }
 });
