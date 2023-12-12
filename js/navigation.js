@@ -4,7 +4,6 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-// TODO: Fix mobile nav collapse behavior
 
 ( function() {
 	const siteNavigation = document.getElementById( 'mainNav' );

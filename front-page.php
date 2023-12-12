@@ -177,7 +177,6 @@ get_header(); ?>
           </div> <!-- End news carousel -->
         </div>
         <div class="row">
-          <!-- Finish styling button -->
           <div class="col-12 col-xl-6 offset-xl-3 text-center mt-4">
             <a class="btn btn-primary mb-2 nav-title" href="<?php echo get_site_url() . '/news' ?>" role="button"><i
                 class="fa-solid fa-newspaper pe-3"></i>View the News Archives</a>
@@ -196,7 +195,7 @@ get_header(); ?>
         Books
       </h2>
 
-      <p class="lead text-center mb-5">
+      <p class="lead text-center mb-4">
         Click each title to learn more and find a link to purchase your own
         copy.
       </p>
@@ -241,7 +240,7 @@ get_header(); ?>
       <h2 class="page-section-heading text-white text-center text-uppercase text-secondary mb-4">
         Anthologies
       </h2>
-      <p class="lead text-center mb-5">
+      <p class="lead text-center mb-4">
         Click each title to learn more and find a link to purchase your own
         copy.
       </p>

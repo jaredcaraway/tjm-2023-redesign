@@ -11724,3 +11724,7 @@ span.no-wrap {
   border-radius: 5px;
   font-size: 20px;
 }
+
+.poem-nav-divider .nav-link {
+  line-height: 1.4rem;
+}

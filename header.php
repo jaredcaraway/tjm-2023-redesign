@@ -18,7 +18,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-	<!-- TODO: Add meta description -->
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Terry Jude Miller: Richmond, Texas-Based Poet & Author</title>
